@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function FtoC() {
+let inputF = document.getElementById('inF').value; 
+document.getElementById('outC').value=((inputF - 32) * 5/9).toFixed(4);
+}
+
+function CtoF() {
+let inputC = document.getElementById('inC').value; 
+document.getElementById('outF').value=Math.round((inputC * 9/5) + 32);
+}
+</script>
+</head>
+<title>Temperature Converter</title>
+<body>
+
+<h2>Temperature Converter</h2>
+<p>Enter a value to convert the value to Celsius:</p>
+
+<p>
+	<span>Fahrenheit</span> 
+	<input id=inF type="text" style='width:100px'/> 
+	<button id=convertToC type="button" onclick='FtoC()'>Convert to C</button>
+	
+</p>
+<p>
+	<span>Celsius:</span>&nbsp;<input type="text" id="outC" style='width:100px' disabled />
+</p>
+
+<p>Enter a value to convert the value to Fahrenheit:</p>
+
+<p>
+	<span>Celsius</span> 
+	<input id=inC type="text" style='width:100px' /> 
+	<button id=convertToF type="button" onclick='CtoF()'>Convert to F</button>
+	
+</p>
+<p>
+	<span>Fahrenheit:</span>&nbsp;<input type="text" id="outF" style='width:100px' disabled />
+</p>
+</body>
+</html>
+
+
